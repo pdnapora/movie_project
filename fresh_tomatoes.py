@@ -17,9 +17,9 @@ main_page_head = '''
         body {
             padding-top: 80px;
             background-image: -webkit-linear-gradient(top, #ffffff 10%, #333333 100%);
-background-image: linear-gradient(to bottom, #ffffff 10%, #333333 100%);
-background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+            background-image: linear-gradient(to bottom, #ffffff 10%, #333333 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
         }
         #trailer .modal-dialog {
             margin-top: 160px;

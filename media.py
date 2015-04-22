@@ -1,7 +1,7 @@
 import webbrowser
 
-class Movie():
-    """a class that models a movie"""
+class Movie(object):
+    """This class models a movie for the 'Fresh Tomatoes' movie website."""
     
     VALID_RATINGS = ["G","PG","PG-13","R"]
     def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):

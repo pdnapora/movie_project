@@ -32,8 +32,9 @@
             height: 100%;
         }
         .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            padding-top: 40px;
         }
         .movie-tile:hover {
             background-color: #ccc;
@@ -58,6 +59,11 @@
             font-weight: lighter;
             font-style: oblique;
         }
+        .release-date {
+            font-family: Helvetica, sans-serif;
+            color: #333;
+            font-weight: lighter;
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -81,6 +87,12 @@
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
+          });
+        $(".movie-title").hover(function() {
+          $(this).html($('<h4>hello!!</h4>'));
+          },
+          function() {
+          $(this).html("{movie_title}");
           });
         });
     </script>
@@ -117,31 +129,43 @@
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="k_13fFIrhPk" data-toggle="modal" data-target="#trailer">
     <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Vforvendettamov.jpg" width="220" height="342">
     <h2 class="movie-title">V For Vendetta</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:3/17/2006V For Vendetta</h4>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5PSNL1qE6VY" data-toggle="modal" data-target="#trailer">
     <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg" width="220" height="342">
     <h2 class="movie-title">Avatar</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:12/18/2009Avatar</h4>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="S5CjKEFb-sM" data-toggle="modal" data-target="#trailer">
     <img src="http://www.razorfine.com/wp-content/uploads/2014/12/the-imitation-game-poster-600x849.jpg" width="220" height="342">
     <h2 class="movie-title">The Imitation Game</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:12/25/2014The Imitation Game</h4>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="FeSLPELpMeM" data-toggle="modal" data-target="#trailer">
     <img src="https://upload.wikimedia.org/wikipedia/en/d/da/There_Will_Be_Blood_Poster.jpg" width="220" height="342">
     <h2 class="movie-title">There Will Be Blood</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:1/25/2008There Will Be Blood</h4>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="-h5UgLvoaok" data-toggle="modal" data-target="#trailer">
     <img src="https://upload.wikimedia.org/wikipedia/en/9/97/The_Score_film.jpg" width="220" height="342">
     <h2 class="movie-title">The Score</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:7/13/2001The Score</h4>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5kJRYBhG43Q" data-toggle="modal" data-target="#trailer">
     <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Michael_clayton.jpg" width="220" height="342">
     <h2 class="movie-title">Michael Clayton</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:10/12/2007Michael Clayton</h4>
 </div>
 
     </div>

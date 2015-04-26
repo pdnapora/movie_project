@@ -37,8 +37,9 @@ main_page_head = '''
             height: 100%;
         }
         .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            padding-top: 40px;
         }
         .movie-tile:hover {
             background-color: #ccc;
@@ -63,6 +64,11 @@ main_page_head = '''
             font-weight: lighter;
             font-style: oblique;
         }
+        .release-date {
+            font-family: Helvetica, sans-serif;
+            color: #333;
+            font-weight: lighter;
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -86,6 +92,12 @@ main_page_head = '''
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
+          });
+        $(".movie-title").hover(function() {
+          $(this).html($('<h4>hello!!</h4>'));
+          },
+          function() {
+          $(this).html("{movie_title}");
           });
         });
     </script>
@@ -132,6 +144,8 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2 class="movie-title">{movie_title}</h2>
+    <div class="inserted"><p></p></div>
+    <h4 class="release-date">Release Date:{release_date}{movie_title}</h4>
 </div>
 '''
 
@@ -148,7 +162,8 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            release_date=movie.release_date
         )
     return content
 

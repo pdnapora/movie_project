@@ -1,5 +1,5 @@
-##The Movie Website project is the first project due for the [Udacity](www.udacity.com)
-##Fullstack Nanodegree program.
+##The Movie Website project is the first project due for the
+##[Udacity](www.udacity.com) Fullstack Nanodegree program.
 
 The project uses a class `Movie` within the `media.py` file to emulate each 
 movie that is represented on the website.
